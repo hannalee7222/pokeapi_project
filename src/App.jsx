@@ -22,9 +22,14 @@ function App() {
     <>
       <h1
         className="border-t-[50px] border-t-[red] 
-      bg-black text-white text-[40px] text-center"
+      bg-black text-white text-[40px] flex justify-center items-center py-4"
       >
         포켓몬 도감
+        <img
+          src="/images/monsterball.png"
+          alt="몬스터볼"
+          className="w-[50px] h-[50px] ml-[6px] relative top-[1px]"
+        />
       </h1>
       <nav className="py-[10px] border-b-[3px] border-b-black flex gap-[20px] justify-center">
         <Link to={'/'}>메인</Link>
