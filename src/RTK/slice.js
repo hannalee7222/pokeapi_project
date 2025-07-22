@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchMultiplePokemonById } from './thunk';
-import { act } from 'react';
 
 export const pokemonSlice = createSlice({
   name: 'pokemon',
@@ -27,7 +26,7 @@ export const pokemonSlice = createSlice({
 
 export const favoriteSlice = createSlice({
   name: 'favorite',
-  initialState: [1, 2, 3],
+  initialState: [],
   reducers: {
     addToFavorite(state, action) {
       state.push(action.payload.pokemonId);
@@ -38,3 +37,5 @@ export const favoriteSlice = createSlice({
     },
   },
 });
+
+export const { addToFavorite, removeFromFavorite } = favoriteSlice.actions;

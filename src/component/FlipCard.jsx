@@ -7,7 +7,7 @@ const FlipImageContainer = styled.div`
   position: relative;
   transform-style: preserve-3d;
   transition: 0.5s;
-  transform: ${(props) => (props.fliped ? 'rotateY(180deg)' : 'rotateY(0deg)')};
+  transform: ${({ fliped }) => (fliped ? 'rotateY(180deg)' : 'rotateY(0deg)')};
 `;
 
 const FrontImage = styled.img`
@@ -28,9 +28,9 @@ export default function FlipCard({ front, back }) {
   const [fliped, setFliped] = useState(false);
   return (
     <>
-      <FlipImageContainer fliped={fliped ? 'flip' : ''}>
-        <FrontImage src={front} />
-        <BackImage src={back} />
+      <FlipImageContainer fliped={fliped}>
+        <FrontImage src={front} alt="앞면 이미지" />
+        <BackImage src={back} alt="뒷면 이미지" />
       </FlipImageContainer>
       <button onClick={() => setFliped((prev) => !prev)}>뒤집기</button>
     </>

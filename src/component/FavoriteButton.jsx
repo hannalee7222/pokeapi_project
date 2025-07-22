@@ -1,10 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { favoriteSlice } from '../RTK/slice';
+import { addToFavorite, removeFromFavorite } from '../RTK/slice';
 
 export default function FavoriteButton({ pokemonId }) {
-  const isFavorite = useSelector((state) =>
-    state.favorite.some((item) => item === pokemonId)
-  );
+  const isFavorite = useSelector((state) => state.favorite.includes(pokemonId));
   const dispatch = useDispatch();
 
   return (
@@ -13,8 +11,8 @@ export default function FavoriteButton({ pokemonId }) {
         e.stopPropagation();
         dispatch(
           isFavorite
-            ? favoriteSlice.actions.removeFromFavorite({ pokemonId })
-            : favoriteSlice.actions.addToFavorite({ pokemonId })
+            ? removeFromFavorite({ pokemonId })
+            : addToFavorite({ pokemonId })
         );
       }}
       className={isFavorite ? 'text-[red]' : ''}

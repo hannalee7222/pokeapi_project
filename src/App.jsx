@@ -1,7 +1,7 @@
 import { lazy, Suspense, useEffect } from 'react';
 import './index.css';
 import './App.scss';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchMultiplePokemonById } from './RTK/thunk';
 import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 
