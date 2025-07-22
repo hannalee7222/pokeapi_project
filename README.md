@@ -1,12 +1,20 @@
-# React + Vite
+# 📘 포켓몬 도감
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React와 Redux를 활용해 만든 포켓몬 도감 프로젝트입니다.  
+포켓몬 검색, 찜하기, Flip 카드 보기, Top 버튼 등의 기능을 제공합니다.
 
-Currently, two official plugins are available:
+### 🏠 메인 페이지
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![메인 페이지](/Users/a/Desktop/oz_git/pokeapi_project/public/images/MainPage.png)
 
-## Expanding the ESLint configuration
+### ♥ 찜 목록
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![찜 페이지](/Users/a/Desktop/oz_git/pokeapi_project/public/images/Favorite.png)
+
+### ♡ 비어있는 찜 목록
+
+![비어있는 찜 페이지](/Users/a/Desktop/oz_git/pokeapi_project/public/images/EmptyFav.png)
+
+### TOP 버튼 생성
+
+![ to the top](/Users/a/Desktop/oz_git/pokeapi_project/public/images/TotheTopBtn.png)
