@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchMultiplePokemonById(151));
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
